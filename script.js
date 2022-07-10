@@ -1,10 +1,10 @@
-// HTML Elements
+
 const board = document.getElementById('board');
 const scoreBoard = document.getElementById('scoreBoard');
 const startButton = document.getElementById('start');
 const gameOverSign = document.getElementById('gameOver');
 
-// Game settings
+
 const boardSize = 10;
 const gameSpeed = 100;
 const squareTypes = {
@@ -19,7 +19,7 @@ const directions = {
     ArrowLeft: -1,
 };
 
-// Game variables
+
 let snake;
 let score;
 let direction;
@@ -31,10 +31,7 @@ const drawSnake = () => {
     snake.forEach( square => drawSquare(square, 'snakeSquare'));
 }
 
-// Rellena cada cuadrado del tablero
-// @params 
-// square: posicion del cuadrado,
-// type: tipo de cuadrado (emptySquare, snakeSquare, foodSquare)
+
 const drawSquare = (square, type) => {
     const [ row, column ] = square.split('');
     boardSquares[row][column] = squareTypes[type];
